@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	remote, err := url.Parse("https://C686027562BCA0DEC40D16A621BB7353.gr7.ap-northeast-2.eks.amazonaws.com")
+	remote, err := url.Parse("")
 	if err != nil {
 		panic(err)
 	}
@@ -32,7 +32,7 @@ func main() {
 	proxy := &httputil.ReverseProxy{
 		Rewrite: func(r *httputil.ProxyRequest) {
 			r.SetURL(remote)
-			r.Out.Header.Add("Authorization", "Bearer "+"eyJhbGciOiJSUzI1NiIsImtpZCI6IlA5UDUyajd4anJzQlZFNXVoU3h4M1BHajNBSzBxTWpaR2VlSjJMRTR1TEUifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJ6Y3Atc3lzdGVtIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6InpjcC1tY20tYmFja2VuZC1zZXJ2aWNlLWFkbWluIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6InpjcC1tY20tYmFja2VuZC1zZXJ2aWNlLWFkbWluIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiMTRjOWRiODMtNWUwOS00YjYxLWEwYjItYTY0ZmJhOTAwN2IxIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OnpjcC1zeXN0ZW06emNwLW1jbS1iYWNrZW5kLXNlcnZpY2UtYWRtaW4ifQ.nKsSJAWAu-kDDxe1nBR9uk0WjpFipG8CI00MHwZFFSiuSLjhzzLNaxk2Ryy6FLqDeCkgaee6UC_MgYdIJjB1XQ1O0mUCgQkl5wEWCDEiXDx1S8p_xzm8op4dmYJ2FW83L5qicBzLG83VNI42FvXO1MiK5RtkOVOHc-6CEyqZSSWVAr-Dq32ehTCcvigs3ZRi-Sp61nSrHd9hMMqsMVNzeek3f6oDXV54RJeVxaP9Ezs_I8DFBCaDO3QRVQvOa-CaUUO9oyTAVOdBkl-EHqWNEMtqmT-rWt9UPJYIGwLQ-UkyNzOB10smBGtEKCaRaHdp1jjlfVF4temyJf8h_mxOXg")
+			r.Out.Header.Add("Authorization", "Bearer "+"")
 		},
 		Transport: transport,
 	}
